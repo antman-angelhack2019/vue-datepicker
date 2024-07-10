@@ -4488,8 +4488,8 @@ const eo = ({
   class: "dp__input_wrap"
 }, oo = ["id", "name", "inputmode", "placeholder", "disabled", "readonly", "required", "value", "autocomplete", "aria-label", "aria-disabled", "aria-invalid"], so = {
   key: 2,
-  class: "dp__clear_icon testing"
-}, uo = /* @__PURE__ */ Le({
+  class: "dp__clear_icon"
+}, uo = { class: "dp__clear_icon testing" }, io = /* @__PURE__ */ Le({
   compatConfig: {
     MODE: 3
   },
@@ -4672,13 +4672,15 @@ const eo = ({
             "data-test": "clear-icon",
             onClick: ee[3] || (ee[3] = Wt((u) => A(u), ["prevent"]))
           })) : x("", !0),
-          ie(D.$slots, "error-icon")
+          ye("span", uo, [
+            ie(D.$slots, "error-icon")
+          ])
         ])) : x("", !0)
       ]);
     };
   }
-}), io = typeof window < "u" ? window : void 0, Ya = () => {
-}, co = (e) => Kn() ? (Gn(e), !0) : !1, fo = (e, t, l, a) => {
+}), co = typeof window < "u" ? window : void 0, Ya = () => {
+}, fo = (e) => Kn() ? (Gn(e), !0) : !1, vo = (e, t, l, a) => {
   if (!e) return Ya;
   let n = Ya;
   const c = tt(
@@ -4692,14 +4694,14 @@ const eo = ({
   ), v = () => {
     c(), n();
   };
-  return co(v), v;
-}, vo = (e, t, l, a = {}) => {
-  const { window: n = io, event: c = "pointerdown" } = a;
-  return n ? fo(n, c, (b) => {
+  return fo(v), v;
+}, mo = (e, t, l, a = {}) => {
+  const { window: n = co, event: c = "pointerdown" } = a;
+  return n ? vo(n, c, (b) => {
     const i = Ie(e), L = Ie(t);
     !i || !L || i === b.target || b.composedPath().includes(i) || b.composedPath().includes(L) || l(b);
   }, { passive: !0 }) : void 0;
-}, mo = /* @__PURE__ */ Le({
+}, go = /* @__PURE__ */ Le({
   compatConfig: {
     MODE: 3
   },
@@ -4861,7 +4863,7 @@ const eo = ({
       var U;
       (U = m.value) == null || U.handleFlow(g);
     };
-    return vo(L, E, () => Ja($e)), t({
+    return mo(L, E, () => Ja($e)), t({
       closeMenu: Je,
       selectDate: Ge,
       clearValue: pe,
@@ -4882,7 +4884,7 @@ const eo = ({
       class: we(oe.value),
       "data-datepicker-instance": ""
     }, [
-      at(uo, Ee({
+      at(io, Ee({
         ref_key: "inputRef",
         ref: E,
         "input-value": r(I),
@@ -4972,15 +4974,15 @@ const eo = ({
     ], 2));
   }
 }), Hn = /* @__PURE__ */ (() => {
-  const e = mo;
+  const e = go;
   return e.install = (t) => {
     t.component("Vue3DatePicker", e);
   }, e;
-})(), go = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+})(), yo = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Hn
 }, Symbol.toStringTag, { value: "Module" }));
-Object.entries(go).forEach(([e, t]) => {
+Object.entries(yo).forEach(([e, t]) => {
   e !== "default" && (Hn[e] = t);
 });
 export {
