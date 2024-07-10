@@ -59,7 +59,7 @@
             </div>
             <span
                 v-if="$slots['clear-icon'] && inputValue && clearable && !disabled && !readonly"
-                class="dp__clear_icon"
+                class="dp__clear_icon testing"
                 ><slot name="clear-icon" :clear="onClear"
             /></span>
             <CancelIcon
@@ -68,6 +68,7 @@
                 data-test="clear-icon"
                 @click.prevent="onClear($event)"
             />
+            <slot name="error-icon" />
         </div>
     </div>
 </template>
