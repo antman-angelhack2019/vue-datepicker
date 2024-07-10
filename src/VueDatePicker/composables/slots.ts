@@ -44,7 +44,7 @@ export const slots = [
     { name: 'tp-inline-arrow-down', use: ['shared', 'time'] },
 ];
 
-export const inputSlots = [{ name: 'trigger' }, { name: 'input-icon' }, { name: 'clear-icon' }, { name: 'dp-input' }];
+export const inputSlots = [{ name: 'trigger' }, { name: 'input-icon' }, { name: 'clear-icon' }, { name: 'dp-input' }, { name: 'tm-icon' }];
 
 const slotNames = {
     all: () => slots,

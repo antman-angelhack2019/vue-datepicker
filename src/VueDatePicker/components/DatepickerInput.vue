@@ -1,5 +1,5 @@
 <template>
-    <div @click="handleOpen">
+    <div class="tm-customize-container" @click="handleOpen">
         <slot v-if="$slots.trigger && !$slots['dp-input'] && !defaultedInline.enabled" name="trigger" />
         <div v-if="!$slots.trigger && (!defaultedInline.enabled || defaultedInline.input)" class="dp__input_wrap">
             <slot
@@ -68,8 +68,8 @@
                 data-test="clear-icon"
                 @click.prevent="onClear($event)"
             />
-            <span class="dp__clear_icon testing">
-                <slot name="error-icon" />
+            <span v-if="$slots['tm-icon']" class="dp__clear_icon">
+                <slot name="tm-icon" />
             </span>
         </div>
     </div>
